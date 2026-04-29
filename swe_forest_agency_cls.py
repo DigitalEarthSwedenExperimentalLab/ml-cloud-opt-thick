@@ -127,6 +127,11 @@ for img_idx, img_path in enumerate(img_paths):
 	# Setup and normalize image
 	band_list = []
 	for band_name in BAND_NAMES:
+		# IMPORTANT NOTE: The below normalization needs to be carefully considered on a case-by-case basis
+		# The -1000 subtraction part is not always applied to Post-Jan-2022 data (but it is for this Skogsstyrelsen
+		# data) -- it also depends on WHEN the data was downloaded e.g. from OpenEO!
+		# Check meta-data etc for the data you use to know the correct normalization.
+		# Thank you Isak Randahl and Linnea Sartorius for flagging this!
 		if yy >= 2022 and mm >= 1:  # New normalization after Jan 2022
 			band_list.append((getattr(img, band_name).values - 1000) / 10000)  # -1k and then 10k division
 		else:
