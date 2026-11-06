@@ -1,0 +1,18 @@
+ml-cloud-opt-thick
+Copyright 2023-2026 RISE Research Institutes of Sweden AB
+
+Written by Aleksis Pirinen (RISE) for the paper "Creating and Leveraging a
+Synthetic Dataset of Cloud Optical Thickness Measures for Cloud Detection
+in MSI" (Remote Sensing, 2024). Original repository:
+https://github.com/aleksispi/ml-cloud-opt-thick
+
+The source code in this repository is licensed under the Apache License,
+Version 2.0 (see LICENSE), except the fcnpytorch/ directory.
+
+fcnpytorch/ is a copy of pytorch-fcn by Kentaro Wada
+(https://github.com/wkentaro/pytorch-fcn), licensed under the MIT License
+(see fcnpytorch/LICENSE). It is not covered by the Apache License.
+
+The datasets referenced in the README (synthetic cloud optical thickness
+data provided by SMHI, and labelled satellite images) are distributed
+separately and keep their own terms.
